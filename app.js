@@ -1,32 +1,15 @@
 const h1 = document.querySelector("div.hello:first-child h1");
 
-console.dir(h1);
-
 function handleTitleCLick(){
-     h1.style.color = "blue";
-}
+     // const clickedClass = "clicked";
+     // if(h1.classList.contains(clickedClass)){
+     //      h1.classList.remove(clickedClass);
+     // } else {
+     //      h1.classList.add(clickedClass)
+     // }
 
-function handleMouseEnter(){
-     h1.innerText = "Mouse is here!";
-     h1.style.color = "blue";
-}
-
-function handleMouseLeave(){
-     h1.innerText = "Mouse is gone!";
-     h1.style.color = "red";
-}
-
-function handleWindowResize(){
-     document.body.style.backgroundColor = "tomato";
-}
-
-function handleWindowCopy(){
-     alert("Copier!s")
+     h1.classList.toggle("clicked"); // 위 다섯줄의 코드와 똑같은 동작을 수행하는 method
+     // toggle의 인자로 clicked를 그대로 넣은 이유는 "한번만 쓰이기 때문이고" 여러번 쓰일 시 변수에 넣고 사용한다.
 }
 
 h1.addEventListener("click", handleTitleCLick); // click에 대해서만 listen을 할 것이라는 것을 암시
-h1.addEventListener("mouseenter", handleMouseEnter); // argument is only need function name
-h1.addEventListener("mouseleave", handleMouseLeave); 
-
-window.addEventListener("resize", handleWindowResize);
-window.addEventListener("copy", handleWindowCopy);
