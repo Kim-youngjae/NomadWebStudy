@@ -13,3 +13,5 @@ function handleTitleCLick(){
 }
 
 h1.addEventListener("click", handleTitleCLick); // click에 대해서만 listen을 할 것이라는 것을 암시
+
+//className, if/else, classList, contains, toggle에 대해서 공부하였음
